@@ -1,6 +1,6 @@
 {
     "editor.formatOnSave": false, // running prettier as an eslint rule, not a formatter
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": true,
     },
 }

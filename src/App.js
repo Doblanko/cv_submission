@@ -5,8 +5,14 @@ class App extends Component {
     super();
 
     this.state = {
-      name: '',
-
+      isGeneralEdit: true,
+      isEducationEdit: true,
+      isSkillEdit: true,
+      info: {
+        name: '',
+        email: '',
+        phone: '',
+      },
     };
   }
 
@@ -16,31 +22,27 @@ class App extends Component {
     });
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.setState({
-      name: '',
-    });
+  handleGeneralSubmit = (info) => {
+    this.setState((prevState) => ({
+      info: {
+        name: info.name,
+        email: info.email,
+        phone: info.phone,
+      },
+      isGeneralEdit: !prevState.GeneralEdit,
+    }));
   };
 
   render() {
     // destructuring
-    const { name } = this.state;
+    const { isGeneralEdit, isEducationEdit, isSkillEdit } = this.state;
 
     return (
+
       <div id="App">
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="nameInput">
-            Name
-            <input
-              id="nameInput"
-              type="text"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
-          <button type="submit">Submit General Info</button>
-        </form>
+        {isGeneralEdit
+          ? <GeneralEdit submit={this.handleGeneralSubmit} info={this.state.info} />
+          : <GeneralDisplay submit={() => this.toggleEdit('isGeneralEdit')} info={this.state.info} />}
       </div>
 
     );
