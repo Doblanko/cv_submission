@@ -3,4 +3,5 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
     },
+    "javascript.validate.enable": false // disable vs code syntax checking (leave it to linter)
 }
