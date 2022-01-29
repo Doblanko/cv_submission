@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 import GeneralEdit from './components/GeneralEdit';
 import GeneralDisplay from './components/GeneralDisplay';
 import EducationEdit from './components/EducationEdit';
