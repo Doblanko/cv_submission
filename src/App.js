@@ -81,7 +81,7 @@ class App extends Component {
             ? <GeneralEdit handleSubmit={this.handleSubmit} change={this.handleChange} info={info} />
             : <GeneralDisplay handleSubmit={this.handleSubmit('isGeneralEdit')} info={info} />
         }
-        {
+        {/* {
           isEducationEdit
             ? <EducationEdit handleSubmit={this.handleSubmit('isEducationEdit')} info={education} />
             : <EducationDisplay handleSubmit={this.handleSubmit('isEducationEdit')} info={education} />
@@ -90,7 +90,7 @@ class App extends Component {
           isWorkEdit
             ? <WorkEdit handleSubmit={this.handleSumit('isWorkEdit')} info={work} />
             : <WorkDisplay handleSubmit={this.handleSumit('isWorkEdit')} info={work} />
-        }
+        } */}
       </div>
 
     );

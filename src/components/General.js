@@ -49,7 +49,7 @@ class GeneralEdit extends Component {
             />
           </label>
           <br />
-          <button type="submit" onClick={this.handleSubmit(handleParentSubmit)}>Submit</button>
+          <button type="submit" onClick={(e) => GeneralEdit.handleSubmit(e, handleParentSubmit)}>Submit</button>
         </form>
       </div>
     );
