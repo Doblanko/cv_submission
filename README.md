@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# CV Submission App
+- Made to practice using state and props
+- Disabled the following linter rules
+    - Prefer stateless functional components () --> Haven't learned yet, stuck to class components
+    - React proptypes --> haven't learned yet
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
